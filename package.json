@@ -8,8 +8,7 @@
   "scripts": {
     "build": "rollup --config rollup.config.umd.js && rollup --config rollup.config.es.js",
     "eslint": "eslint --format=node_modules/eslint-formatter-pretty ./lib; exit 0",
-    "prepublish": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "npm run build"
   },
   "author": {
     "name": "Brandon Weiss",
