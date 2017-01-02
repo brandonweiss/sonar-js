@@ -1,0 +1,40 @@
+{
+  "name": "sonar-js",
+  "version": "0.0.0",
+  "description": "A tiny library for detecting when a browser is scrolled to the bottom of a web page.",
+  "main": "./dist/sonar.js",
+  "module": "./dist/sonar.es.js",
+  "jsnext:main": "./dist/sonar.es.js",
+  "scripts": {
+    "build": "rollup --config rollup.config.umd.js && rollup --config rollup.config.es.js",
+    "eslint": "eslint --format=node_modules/eslint-formatter-pretty ./lib; exit 0",
+    "prepublish": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Brandon Weiss",
+    "email": "desk@brandonweiss.me",
+    "url": "http://brandonweiss.me"
+  },
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brandonweiss/sonar-js.git"
+  },
+  "devDependencies": {
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "eslint": "^3.12.2",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-formatter-pretty": "^1.1.0",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "rollup": "^0.39.0",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-cleanup": "^0.1.4",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-uglify": "^1.0.1"
+  },
+  "dependencies": {
+    "volve": "^0.0.8"
+  }
+}
