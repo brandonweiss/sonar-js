@@ -33,4 +33,4 @@ var notWithinRangeOfPageBottom = function() {
 sonar.ping(600, withinRangeOfPageBottom, notWithinRangeOfPageBottom)
 ```
 
-`Sonar#ping` is throttled to not call the callbacks more than once ever 50ms.
+`Sonar#ping` is throttled to not call the callbacks more than once every 50ms.
