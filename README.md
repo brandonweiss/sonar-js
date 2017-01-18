@@ -17,7 +17,27 @@ The package is built on-the-fly before publishing to NPM so the `dist` folder is
 
 ## Usage
 
-Create an instance of `Sonar` passing in the `window` and then call `ping` passing in the range to the bottom of the page, a function to call when within range of the bottom and a function to call when not within range of the bottom.
+Create an instance of `Sonar` passing in the `window` and then call `ping` passing in the range to the bottom of the page, a function to call when within range of the bottom and an optional function to call when not within range of the bottom.
+
+When `ping` is called one of the callbacks will fire, depending on whether or not the scroll is currently within range of the page bottom. The behavior after that depends on which callbacks are provided.
+
+### One callback
+
+```javascript
+var sonar = new Sonar(window)
+
+var withinRangeOfPageBottom = function() {
+  document.querySelector('.popover').classList.remove('hidden')
+}
+
+sonar.ping(600, withinRangeOfPageBottom)
+```
+
+Without a second callback to fire when losing the bottom of the page this is essentially a one-time use. The callback will fire once when finding the bottom of the page and then never fire again, even if you scroll up and back down again.
+
+This is useful for making a permanent, persistent change when someone scrolls to the bottom of the page.
+
+### Two callbacks
 
 ```javascript
 var sonar = new Sonar(window)
@@ -33,7 +53,9 @@ var notWithinRangeOfPageBottom = function() {
 sonar.ping(600, withinRangeOfPageBottom, notWithinRangeOfPageBottom)
 ```
 
-When `ping` is called one of the callbacks will fire, depending on whether or not the scroll is currently within range of the page bottom. After that, the callbacks will only fire once when finding the bottom or losing the bottom. That is, the callbacks will only fire or re-fire when the state changes.
+With a second callback to fire when losing the bottom of the page this becomes a toggle. The callbacks will only fire once when finding the bottom or losing the bottom. That is, the callbacks will only fire or re-fire when the state changes.
+
+This is useful for making a permanent, temporary change when someone scrolls to the bottom of the page and then reversing it when they scroll away from the bottom of the page.
 
 ## Tests
 

@@ -30,7 +30,7 @@ test("fires the entering callback when entering range of the bottom", (t) => {
 
   sonar.ping(100, () => {
     t.pass()
-  }, () => {})
+  })
 
   scrollTo(window, 0)
   scrollTo(window, 300)
@@ -71,7 +71,7 @@ test("should only fire the entering callback once when within range of the page 
 
   sonar.ping(100, () => {
     t.pass()
-  }, () => {})
+  })
 
   scrollTo(window, 300)
   scrollTo(window, 350)
@@ -97,7 +97,7 @@ test("should only fire the leaving callback once when not within range of the pa
   scrollTo(window, 0)
 })
 
-test("fires a callback if already within range of the bottom when setup", (t) => {
+test("fires the entering callback if already within range of the bottom when setup", (t) => {
   t.plan(1)
 
   let window = createWindow({
@@ -111,10 +111,10 @@ test("fires a callback if already within range of the bottom when setup", (t) =>
 
   sonar.ping(100, () => {
     t.pass()
-  }, () => {})
+  })
 })
 
-test("fires a callback if already not within range of the bottom when setup", (t) => {
+test("fires the leaving callback if already not within range of the bottom when setup", (t) => {
   t.plan(1)
 
   let window = createWindow({
@@ -129,4 +129,45 @@ test("fires a callback if already not within range of the bottom when setup", (t
   sonar.ping(100, () => {}, () => {
     t.pass()
   })
+})
+
+test("if there is no leaving callback when leaving and re-entering the entering callback will never fire again", (t) => {
+  t.plan(1)
+
+  let window = createWindow({
+    pageHeight: 400,
+    windowHeight: 200
+  })
+
+  scrollTo(window, 0)
+
+  let sonar = new Sonar(window)
+
+  sonar.ping(100, () => {
+    t.pass()
+  })
+
+  scrollTo(window, 300)
+  scrollTo(window, 0)
+  scrollTo(window, 300)
+})
+
+test("if starting within range of page bottom with no leaving callback the entering callback should fire and then never fire again", (t) => {
+  t.plan(1)
+
+  let window = createWindow({
+    pageHeight: 400,
+    windowHeight: 200
+  })
+
+  scrollTo(window, 300)
+
+  let sonar = new Sonar(window)
+
+  sonar.ping(100, () => {
+    t.pass()
+  })
+
+  scrollTo(window, 0)
+  scrollTo(window, 300)
 })
