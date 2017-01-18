@@ -9,8 +9,7 @@ module.exports = {
     sourceType: "module",
   },
   env: {
-    es6: true,
-    // "browser": true
+    es6: true
   },
   rules: {
     quotes: ["error", "double"],

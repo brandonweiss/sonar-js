@@ -7,8 +7,9 @@
   "jsnext:main": "./dist/sonar.es.js",
   "scripts": {
     "build": "rollup --config rollup.config.umd.js && rollup --config rollup.config.es.js",
-    "eslint": "eslint --format=node_modules/eslint-formatter-pretty ./lib; exit 0",
-    "prepublish": "npm run build"
+    "eslint": "eslint --format=node_modules/eslint-formatter-pretty ./lib ./test; exit 0",
+    "prepublish": "npm run build",
+    "test": "ava --watch"
   },
   "author": {
     "name": "Brandon Weiss",
@@ -21,12 +22,16 @@
     "url": "https://github.com/brandonweiss/sonar-js.git"
   },
   "devDependencies": {
+    "ava": "^0.17.0",
+    "babel-preset-es2015": "^6.18.0",
     "babel-preset-es2015-rollup": "^3.0.0",
+    "babel-register": "^6.18.0",
     "eslint": "^3.12.2",
     "eslint-config-standard": "^6.2.1",
     "eslint-formatter-pretty": "^1.1.0",
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^2.0.1",
+    "jsdom": "^9.9.1",
     "rollup": "^0.39.0",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-cleanup": "^0.1.4",
@@ -35,5 +40,13 @@
   },
   "dependencies": {
     "volve": "^0.0.8"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ]
+  },
+  "babel": {
+    "presets": ["es2015"]
   }
 }
