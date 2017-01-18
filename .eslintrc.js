@@ -5,6 +5,7 @@ module.exports = {
     "standard",
     "promise",
   ],
+  parser: "babel-eslint",
   parserOptions: {
     sourceType: "module",
   },
