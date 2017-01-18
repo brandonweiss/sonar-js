@@ -9,7 +9,8 @@
     "build": "rollup --config rollup.config.umd.js && rollup --config rollup.config.es.js",
     "eslint": "eslint --format=node_modules/eslint-formatter-pretty ./lib ./test; exit 0",
     "prepublish": "npm run build",
-    "test": "ava --watch"
+    "test": "ava",
+    "test:watch": "ava --watch"
   },
   "author": {
     "name": "Brandon Weiss",
