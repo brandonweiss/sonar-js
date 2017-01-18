@@ -18,7 +18,7 @@ let scrollTo = (window, scrollY) => {
   window.dispatchEvent(event)
 }
 
-test("fires a callback when entering range of the bottom", async (t) => {
+test("fires the entering callback when entering range of the bottom", (t) => {
   t.plan(1)
 
   let window = createWindow({
@@ -32,16 +32,11 @@ test("fires a callback when entering range of the bottom", async (t) => {
     t.pass()
   }, () => {})
 
-  await new Promise(resolve => window.setTimeout(resolve, 50))
-
   scrollTo(window, 0)
-
-  await new Promise(resolve => window.setTimeout(resolve, 50))
-
   scrollTo(window, 300)
 })
 
-test("fires a callback when leaving range of the bottom", async (t) => {
+test("fires the leaving callback when leaving range of the bottom", (t) => {
   t.plan(2)
 
   let window = createWindow({
@@ -59,12 +54,50 @@ test("fires a callback when leaving range of the bottom", async (t) => {
     t.pass()
   })
 
-  await new Promise(resolve => window.setTimeout(resolve, 50))
-
   scrollTo(window, 0)
 })
 
-test("fires a callback if already within range of the bottom when setup", async (t) => {
+test("should only fire the entering callback once when within range of the page bottom", (t) => {
+  t.plan(1)
+
+  let window = createWindow({
+    pageHeight: 400,
+    windowHeight: 200
+  })
+
+  scrollTo(window, 0)
+
+  let sonar = new Sonar(window)
+
+  sonar.ping(100, () => {
+    t.pass()
+  }, () => {})
+
+  scrollTo(window, 300)
+  scrollTo(window, 350)
+})
+
+test("should only fire the leaving callback once when not within range of the page bottom", (t) => {
+  t.plan(1)
+
+  let window = createWindow({
+    pageHeight: 400,
+    windowHeight: 200
+  })
+
+  scrollTo(window, 300)
+
+  let sonar = new Sonar(window)
+
+  sonar.ping(100, () => {}, () => {
+    t.pass()
+  })
+
+  scrollTo(window, 0)
+  scrollTo(window, 0)
+})
+
+test("fires a callback if already within range of the bottom when setup", (t) => {
   t.plan(1)
 
   let window = createWindow({
@@ -81,7 +114,7 @@ test("fires a callback if already within range of the bottom when setup", async 
   }, () => {})
 })
 
-test("fires a callback if already not within range of the bottom when setup", async (t) => {
+test("fires a callback if already not within range of the bottom when setup", (t) => {
   t.plan(1)
 
   let window = createWindow({

@@ -33,7 +33,7 @@ var notWithinRangeOfPageBottom = function() {
 sonar.ping(600, withinRangeOfPageBottom, notWithinRangeOfPageBottom)
 ```
 
-`Sonar#ping` is throttled to not call the callbacks more than once every 50ms.
+When `ping` is called one of the callbacks will fire, depending on whether or not the scroll is currently within range of the page bottom. After that, the callbacks will only fire once when finding the bottom or losing the bottom. That is, the callbacks will only fire or re-fire when the state changes.
 
 ## Tests
 

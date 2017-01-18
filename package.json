@@ -39,9 +39,7 @@
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-plugin-uglify": "^1.0.1"
   },
-  "dependencies": {
-    "volve": "^0.0.8"
-  },
+  "dependencies": {},
   "ava": {
     "require": [
       "babel-register"

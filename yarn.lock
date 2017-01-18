@@ -3462,10 +3462,6 @@ vlq@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/vlq/-/vlq-0.2.1.tgz#14439d711891e682535467f8587c5630e4222a6c"
 
-volve@^0.0.8:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/volve/-/volve-0.0.8.tgz#9dfdbbf10539d7563bbef52f170981e3749181a2"
-
 webidl-conversions@^3.0.0, webidl-conversions@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-3.0.1.tgz#24534275e2a7bc6be7bc86611cc16ae0a5654871"
