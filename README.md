@@ -37,7 +37,7 @@ sonar.ping(600, withinRangeOfPageBottom)
 
 Without a second callback to fire when losing the bottom of the page this is essentially a one-time use. The callback will fire once when finding the bottom of the page and then never fire again, even if you scroll up and back down again.
 
-This is useful for making a permanent, persistent change when someone scrolls to the bottom of the page.
+This is useful for making a permanent change when someone scrolls to the bottom of the page.
 
 ### Two callbacks
 
@@ -57,7 +57,7 @@ sonar.ping(600, withinRangeOfPageBottom, notWithinRangeOfPageBottom)
 
 With a second callback to fire when losing the bottom of the page this becomes a toggle. The callbacks will only fire once when finding the bottom or losing the bottom. That is, the callbacks will only fire or re-fire when the state changes.
 
-This is useful for making a permanent, temporary change when someone scrolls to the bottom of the page and then reversing it when they scroll away from the bottom of the page.
+This is useful for making a temporary change when someone scrolls to the bottom of the page and then reversing it when they scroll away from the bottom of the page.
 
 ## Tests
 
