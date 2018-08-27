@@ -1,4 +1,3 @@
 node_modules
 .eslintrc.js
 .nvmrc
-rollup.config.*
