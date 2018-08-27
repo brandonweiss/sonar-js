@@ -2,11 +2,11 @@
   "name": "sonar-js",
   "version": "0.2.0",
   "description": "A tiny library for detecting when a browser is scrolled to the bottom of a web page.",
-  "main": "./dist/sonar.js",
-  "module": "./dist/sonar.es.js",
-  "jsnext:main": "./dist/sonar.es.js",
+  "main": "dist/sonar.js",
+  "umd:main": "dist/sonar.umd.js",
+  "module": "dist/sonar.m.js",
   "scripts": {
-    "build": "rollup --config rollup.config.umd.js && rollup --config rollup.config.es.js",
+    "build": "microbundle --entry lib/sonar.js --name Sonar",
     "eslint": "eslint --format=node_modules/eslint-formatter-pretty ./lib ./test; exit 0",
     "prepublish": "npm run build",
     "test": "ava",
@@ -33,10 +33,7 @@
     "eslint-plugin-standard": "^3.1.0",
     "esm": "^3.0.80",
     "jsdom": "^9.9.1",
-    "rollup": "^0.39.0",
-    "rollup-plugin-babel": "^3.0.7",
-    "rollup-plugin-cleanup": "^3.0.0",
-    "rollup-plugin-uglify": "^4.0.0"
+    "microbundle": "^0.6.0"
   },
   "dependencies": {},
   "ava": {
