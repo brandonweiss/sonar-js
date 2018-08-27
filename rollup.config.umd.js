@@ -10,10 +10,7 @@ export default {
   sourceMap: true,
 
   plugins: [
-    babel({
-      babelrc: false,
-      presets: ["es2015-rollup"],
-    }),
+    babel(),
     nodeResolve({
       module: false,
       jsnext: true,
