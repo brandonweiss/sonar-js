@@ -5,12 +5,9 @@ module.exports = {
     "standard",
     "promise",
   ],
-  parser: "babel-eslint",
   parserOptions: {
+    ecmaVersion: "2018",
     sourceType: "module",
-  },
-  env: {
-    es6: true
   },
   rules: {
     quotes: ["error", "double"],
