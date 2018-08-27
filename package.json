@@ -1,6 +1,6 @@
 {
   "name": "sonar-js",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "A tiny library for detecting when a browser is scrolled to the bottom of a web page.",
   "main": "dist/sonar.js",
   "umd:main": "dist/sonar.umd.js",
