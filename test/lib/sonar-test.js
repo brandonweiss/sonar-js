@@ -1,12 +1,17 @@
 import test from "ava"
-import jsdom from "jsdom"
+import { JSDOM } from "jsdom"
 import Sonar from "../../lib/sonar"
 
 let createWindow = (options = {}) => {
-  let document = jsdom.jsdom("<html><body></body></html>")
-  let window = document.defaultView
+  let dom = new JSDOM("<html><body></body></html>")
+  let window = dom.window
 
-  window.document.body.offsetHeight = options.pageHeight
+  Object.defineProperties(window.HTMLElement.prototype, {
+    offsetHeight: {
+      get: () => options.pageHeight
+    },
+  })
+
   window.innerHeight = options.windowHeight
 
   return window
