@@ -2,9 +2,12 @@
 
 ![](https://cloud.githubusercontent.com/assets/4727/22095892/1b8ffeb8-ddcd-11e6-9f50-1116ff201553.png)
 
-A tiny library for detecting when a browser is scrolled to the bottom of a web page.
+> A tiny library for detecting when a browser is scrolled to the bottom of a web page.
 
-For example, you might use this on a blog to show a popover when a reader has finished a post, letting them know they can receive new posts by email if they submit their email address.
+[![](https://badgen.net/npm/v/sonar-js?icon=npm)](https://www.npmjs.com/package/sonar-js)
+[![](https://badgen.net/david/dep/brandonweiss/sonar-js)](https://david-dm.org/brandonweiss/sonar-js)
+
+You could use this, for example, on a blog to show a popover when a reader has finished a post, letting them know they can receive new posts by email if they submit their email address.
 
 ## Installation
 
