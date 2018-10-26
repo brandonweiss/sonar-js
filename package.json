@@ -4,7 +4,7 @@
   "description": "A tiny library for detecting when a browser is scrolled to the bottom of a web page.",
   "main": "dist/sonar.js",
   "umd:main": "dist/sonar.umd.js",
-  "module": "dist/sonar.m.js",
+  "module": "dist/sonar.mjs",
   "scripts": {
     "build": "microbundle --entry lib/sonar.js --name Sonar",
     "eslint": "eslint --format=node_modules/eslint-formatter-pretty ./lib ./test; exit 0",
@@ -31,7 +31,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "esm": "^3.0.84",
     "jsdom": "^12.2.0",
-    "microbundle": "^0.6.0",
+    "microbundle": "^0.7.0",
     "np": "^3.0.4"
   },
   "dependencies": {},
