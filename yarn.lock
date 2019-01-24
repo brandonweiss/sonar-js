@@ -3895,11 +3895,6 @@ needle@^2.2.1:
     iconv-lite "^0.4.4"
     sax "^1.2.4"
 
-new-github-release-url@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/new-github-release-url/-/new-github-release-url-0.1.0.tgz#942bba0ce45ac69ff6879a0b4261f1979dfc6e95"
-  integrity sha512-2rtsTFdC6C+KLy0kipybk1q+F6j/zzDb3oTWUfPjx4a4V7qs6xJSupeXfPcE9cpW2A+7sFvhS7+9CVRNxIb7pw==
-
 nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
@@ -3981,10 +3976,10 @@ normalize-url@^3.0.0, normalize-url@^3.1.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-3.3.0.tgz#b2e1c4dc4f7c6d57743df733a4f5978d18650559"
 
-np@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/np/-/np-4.0.1.tgz#f49289fde6cad831cc1def94e4f2d550424ff07a"
-  integrity sha512-lpdi3rRuw+tBk0Nm1iARgT/Nd810oIHAzdonxcSAy4+etWml1o0wdUUEn7li2RQUi2yOTIO+B1XO9of7CALwlw==
+np@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/np/-/np-4.0.2.tgz#be164eab2159d6a45ce5fdaee276af71aaa27873"
+  integrity sha512-TN9rLMeGeGKcpFKOMGVd/CvMSEFmifRSBi8iaM8iZwBS5IcdyBQLTNq2KclwN68k9VE5zgp5auK7NbFzXyYElw==
   dependencies:
     "@samverschueren/stream-to-observable" "^0.3.0"
     any-observable "^0.3.0"
@@ -4001,7 +3996,6 @@ np@^4.0.1:
     listr-input "^0.1.3"
     log-symbols "^2.1.0"
     meow "^5.0.0"
-    new-github-release-url "^0.1.0"
     npm-name "^5.0.1"
     opn "^5.4.0"
     ow "^0.10.0"
