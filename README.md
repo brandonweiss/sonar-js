@@ -1,12 +1,18 @@
-# Sonar.js
-
-![](https://cloud.githubusercontent.com/assets/4727/22095892/1b8ffeb8-ddcd-11e6-9f50-1116ff201553.png)
-
-> A tiny library for detecting when a browser is scrolled to the bottom of a web page.
+<h1 align="center">
+	<br>
+	<img src="media/logomark.png" width="300px" alt="Sonar.js">
+	<br>
+	<br>
+  Sonar.js
+	<br>
+	<br>
+</h1>
 
 [![](https://badgen.net/travis/brandonweiss/sonar-js?icon=travis)](https://www.travis-ci.com/brandonweiss/sonar-js)
 [![](https://badgen.net/npm/v/sonar-js?icon=npm)](https://www.npmjs.com/package/sonar-js)
 [![](https://badgen.net/david/dep/brandonweiss/sonar-js)](https://david-dm.org/brandonweiss/sonar-js)
+
+> A tiny library for detecting when a browser is scrolled to the bottom of a web page.
 
 You could use this, for example, on a blog to show a popover when a reader has finished a post, letting them know they can receive new posts by email if they submit their email address.
 
@@ -69,10 +75,6 @@ This is useful for making a temporary change when someone scrolls to the bottom 
 ## Tests
 
 `yarn test`
-
-## Credit
-
-The icon is [Depth Sounder by Toni Bordoy](https://thenounproject.com/term/depth-sounder/172726).
 
 ## Contributing
 
