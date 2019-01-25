@@ -4,6 +4,7 @@
 
 > A tiny library for detecting when a browser is scrolled to the bottom of a web page.
 
+[![](https://badgen.net/travis/brandonweiss/sonar-js?icon=travis)](https://www.travis-ci.com/brandonweiss/sonar-js)
 [![](https://badgen.net/npm/v/sonar-js?icon=npm)](https://www.npmjs.com/package/sonar-js)
 [![](https://badgen.net/david/dep/brandonweiss/sonar-js)](https://david-dm.org/brandonweiss/sonar-js)
 
