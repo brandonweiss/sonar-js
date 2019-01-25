@@ -15,13 +15,13 @@ You could use this, for example, on a blog to show a popover when a reader has f
 
 The package comes in three formats: CommonJS, Universal Module Definition, and ECMAScript Module.
 
-| Format | package.json key | Path              |
-|--------|------------------|-------------------|
-| CJS    | main             | dist/sonar.js     |
-| UMD    | umd:main         | dist/sonar.umd.js |
-| ESM    | module           | dist/sonar.m.js   |
+| Format | package.json key | Path                     |
+|--------|------------------|--------------------------|
+| CJS    | main             | [dist/sonar.js][CJS]     |
+| UMD    | umd:main         | [dist/sonar.umd.js][UMD] |
+| ESM    | module           | [dist/sonar.m.js][ESM]   |
 
-The package is built on-the-fly before publishing to NPM so the `dist` folder is not in the repo. If you’d like the built files install it via `yarn` or `npm` and pluck the file you need out of `node_modules/sonar-js/dist/`.
+The package is built on-the-fly before publishing to NPM so the `dist` folder is not in the repo. Use the links above to get the built files.
 
 ## Usage
 
@@ -80,3 +80,7 @@ The icon is [Depth Sounder by Toni Bordoy](https://thenounproject.com/term/depth
 3. Commit your changes (`git commit -am "Add some feature"`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+[CJS]: https://unpkg.com/sonar-js/dist/sonar.js
+[UMD]: https://unpkg.com/sonar-js/dist/sonar.umd.js
+[ESM]: https://unpkg.com/sonar-js/dist/sonar.m.js
