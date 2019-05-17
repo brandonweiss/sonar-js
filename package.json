@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "ava": "^1.4.1",
-    "esm": "^3.2.22",
+    "esm": "^3.2.25",
     "husky": "^2.3.0",
     "jsdom": "^15.1.0",
     "microbundle": "^0.9.0",
