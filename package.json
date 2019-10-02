@@ -24,7 +24,7 @@
   "devDependencies": {
     "ava": "^2.4.0",
     "esm": "^3.2.25",
-    "husky": "^3.0.7",
+    "husky": "^3.0.8",
     "jsdom": "^15.1.1",
     "microbundle": "^0.11.0",
     "np": "^5.1.0",
