@@ -22,7 +22,7 @@
     "url": "https://github.com/brandonweiss/sonar-js.git"
   },
   "devDependencies": {
-    "ava": "^2.4.0",
+    "ava": "^3.0.0",
     "esm": "^3.2.25",
     "husky": "^4.2.1",
     "jsdom": "^16.0.1",
