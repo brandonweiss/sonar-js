@@ -29,7 +29,7 @@
     "jsdom": "^16.2.1",
     "microbundle": "^0.11.0",
     "np": "^6.2.0",
-    "prettier": "^1.19.1",
+    "prettier": "^2.0.1",
     "pretty-quick": "^2.0.1"
   },
   "dependencies": {},
